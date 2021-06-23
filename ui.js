@@ -30,7 +30,7 @@ class UI {
     this.windSpeed.textContent = `${weather.wind.speed} km/h`;
     this.currentWeatherIcon.setAttribute(
       "src",
-      `http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`
+      `https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`
     );
     // weather.dt is a unix timestamp so it needs to be converted
     const fullDate = new Date(weather.dt * 1000);
@@ -74,7 +74,7 @@ class UI {
     this.firstForecastDate.textContent = convertedFirstDate;
     this.firstForecastIcon.setAttribute(
       "src",
-      `http://openweathermap.org/img/wn/${firstForecast.weather[0].icon}.png`
+      `https://openweathermap.org/img/wn/${firstForecast.weather[0].icon}.png`
     );
 
     const secondDate = new Date(secondForecast.dt * 1000);
@@ -82,7 +82,7 @@ class UI {
     this.secondForecastDate.textContent = convertedSecondDate;
     this.secondForecastIcon.setAttribute(
       "src",
-      `http://openweathermap.org/img/wn/${secondForecast.weather[0].icon}.png`
+      `https://openweathermap.org/img/wn/${secondForecast.weather[0].icon}.png`
     );
 
     const thirdDate = new Date(thirdForecast.dt * 1000);
@@ -90,7 +90,7 @@ class UI {
     this.thirdForecastDate.textContent = convertedThirdDate;
     this.thirdForecastIcon.setAttribute(
       "src",
-      `http://openweathermap.org/img/wn/${thirdForecast.weather[0].icon}.png`
+      `https://openweathermap.org/img/wn/${thirdForecast.weather[0].icon}.png`
     );
   }
 }
