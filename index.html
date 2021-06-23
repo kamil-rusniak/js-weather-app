@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Weather App</title>
+  </head>
+
+  <body>
+    <div id="app-container">
+      <p>
+        <a class="credits" href="https://openweathermap.org"
+          >Weather data provider: OpenWeather (TM)</a
+        >
+      </p>
+      <p>
+        <a class="credits" href="https://kamilrusniak.com"
+          >Made by Kamil Ruśniak</a
+        >
+      </p>
+
+      <form id="location-form">
+        <input type="text" name="" id="search-input" />
+        <button type="submit" id="submit-button"><i class="fas fa-search" id="change-location"></i></button>
+        
+      </form>
+
+      <div id="location-container">
+        <div id="location-signs">
+          <i class="fas fa-map-marker-alt"></i>
+          <p id="country-code"></p>
+        </div>
+        <div id="location-text"></div>
+      </div>
+
+      <div id="date-container">
+        <p id="date-text"></p>
+      </div>
+
+      <div id="current-weather">
+        <div id="current-temperature">
+          <img src="" alt="Current weather icon" id="current-weather-icon" />
+          <p id="current-temperature-text"></p>
+        </div>
+
+        <div>
+          <p id="current-weather-description"></p>
+        </div>
+      </div>
+
+      <div id="current-conditions">
+        <div>
+          <i class="fas fa-cloud-rain"></i>
+          <p id="rain-chance"></p>
+        </div>
+
+        <div>
+          <i class="fas fa-wind"></i>
+          <p id="wind-speed"></p>
+        </div>
+      </div>
+      <hr id="blur-line" />
+      <div id="next-days">
+        <div>
+          <p id="first-day-name"></p>
+          <img src="" alt="First forecast weather icon" id="first-day-icon" />
+          <p id="first-day-temperature"></p>
+        </div>
+
+        <div>
+          <p id="second-day-name"></p>
+          <img src="" alt="Second forecast weather icon" id="second-day-icon" />
+          <p id="second-day-temperature"></p>
+        </div>
+
+        <div>
+          <p id="third-day-name"></p>
+          <img src="" alt="Third forecast weather icon" id="third-day-icon" />
+          <p id="third-day-temperature"></p>
+        </div>
+      </div>
+    </div>
+    <script defer src="localstorage.js"></script>
+    <script defer src="ui.js"></script>
+    <script defer src="api.js"></script>
+    <script defer src="app.js"></script>
+   
+  </body>
+</html>
